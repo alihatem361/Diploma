@@ -2,7 +2,7 @@ import React from "react";
 
 export function HeroSection() {
   return (
-    <section className="absolute w-[647px] h-[325px] text-white text-center left-12 top-[246px] max-sm:w-[calc(100%_-_40px)] max-sm:left-5">
+    <section className="flex flex-col items-center text-white text-center mt-10 md:mt-0 w-full max-w-[647px] mx-auto">
       <div className="flex flex-col items-center gap-[5px]">
         <h1 className="font-bold text-[74px] leading-[88px]">MBA</h1>
         <div className="font-normal text-[40px] leading-10 tracking-[23px]">

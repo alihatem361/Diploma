@@ -25,8 +25,8 @@ export function RegistrationForm() {
   };
 
   return (
-    <section className="absolute w-[609px] rounded shadow-[0_0_10px_rgba(0,0,0,0.1)] bg-[#FCFCFC] pt-[110px] pb-[147px] px-[61px] right-0 top-32 max-md:w-full max-md:px-[30px] max-md:py-[60px] max-sm:w-[calc(100%_-_40px)] max-sm:px-5 max-sm:py-10 max-sm:right-5">
-      <div className="w-full text-center mb-10">
+    <section className="w-full max-w-[609px] rounded shadow-[0_0_10px_rgba(0,0,0,0.1)] bg-[#FCFCFC] p-8 md:p-[61px] md:pt-[110px] md:pb-[147px] mx-auto">
+      <div className="w-full text-center mb-10 text-right">
         <h2 className="font-bold text-2xl text-black">
           <span>سجل الآن و احصل علي</span>{" "}
           <span className="text-[#029843]">شهادة معتمدة</span>

@@ -2,16 +2,16 @@ import React from "react";
 
 export function GreenShape() {
   return (
-    <div>
+    <div className="fixed left-[23px] top-[36px] md:left-[180px] md:top-[83px] z-0 w-[331px] h-[439px] sm:w-[300px] sm:h-[350px] md:w-[350px] md:h-[400px] lg:w-[415px] lg:h-[476px]">
       <svg
         id="161:3195"
-        width="415"
-        height="476"
+        width="100%"
+        height="100%"
         viewBox="0 0 415 476"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="green-shape"
-        style={{ position: "absolute", left: "89px", top: "94px" }}
+        preserveAspectRatio="xMidYMid meet"
       >
         <g filter="url(#filter0_d_161_3195)">
           <path
