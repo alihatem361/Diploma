@@ -1,3 +1,6 @@
+import React from "react";
+import "./style.css";
+
 export function MbaProgramSection() {
   const infoItems = [
     "احصل على شهادة الماجستير المهني في إدارة الأعمال MBA المعتمدة من جامعة مارا للتكنولوجيا في ماليزيا واختر من بين 5 تخصصات متنوعة:",
@@ -15,6 +18,8 @@ export function MbaProgramSection() {
       title: "إدارة الاعمال",
       altText: "إدارة الاعمال",
       gridArea: "business",
+      description:
+        'تركز دورة "الإدارة الأعمال" على تزويد المشاركين بالمعارف والمهارات اللازمة لفهم وتطبيق المفاهيم والأساليب الحديثة في مجال الإدارة. تهدف هذه الدورة إلى تأهيل المديرين الجدد والمرشحين لشغل مناصب إدارية.',
     },
     {
       id: 2,
@@ -23,6 +28,8 @@ export function MbaProgramSection() {
       title: "التسويق",
       altText: "التسويق",
       gridArea: "marketing",
+      description:
+        "تركز دورة التسويق على فهم سلوك المستهلك وتطوير استراتيجيات التسويق الفعالة. تغطي الدورة أحدث التقنيات والأدوات في التسويق الرقمي وإدارة العلامات التجارية.",
     },
     {
       id: 3,
@@ -31,6 +38,8 @@ export function MbaProgramSection() {
       title: "التمويل و البنوك",
       altText: "التمويل و البنوك",
       gridArea: "finance",
+      description:
+        "تقدم دورة التمويل والبنوك فهماً عميقاً للأسواق المالية والعمليات المصرفية. تشمل مواضيع مثل إدارة المخاطر، التحليل المالي، والاستثمار.",
     },
     {
       id: 4,
@@ -39,6 +48,8 @@ export function MbaProgramSection() {
       title: "سلاسل الإمداد",
       altText: "سلاسل الإمداد",
       gridArea: "supply",
+      description:
+        "تغطي دورة سلاسل الإمداد جميع جوانب إدارة سلسلة التوريد، من التخطيط إلى التنفيذ. تركز على تحسين الكفاءة وتقليل التكاليف في العمليات اللوجستية.",
     },
     {
       id: 5,
@@ -47,27 +58,44 @@ export function MbaProgramSection() {
       title: "إدارة الموارد البشرية",
       altText: "إدارة الموارد البشرية",
       gridArea: "hr",
+      description:
+        "تركز دورة إدارة الموارد البشرية على تطوير مهارات إدارة وتنمية الموظفين. تشمل مواضيع مثل التوظيف، التدريب، تقييم الأداء، وتطوير المواهب.",
     },
   ];
 
   return (
     <section className="MbaProgramSection relative bg-[#E8ECF4] pb-12">
-      <div dir="rtl" className="relative w-full max-w-7xl mx-auto px-4 py-12">
-        <img
-          src="/images/Ellipse 1446.svg"
-          alt="mba program section bg"
-          className="absolute top-0 left-[-120px]"
-        />
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center md:text-right mb-4 sm:mb-6 md:mb-8">
+      <img
+        src="/images/Ellipse 158.svg"
+        alt="shadow"
+        className="MbaProgramSection-larg-shape"
+      />
+      <img
+        src="/images/Ellipse 157.svg"
+        alt="shadow"
+        className="MbaProgramSection-larg-shape block md:hidden"
+      />
+
+      <div className="relative w-full max-w-7xl mx-auto px-8 md:px-4 pb-12 pt-[90px] md:pt-[180px]">
+        <h1 className=" relative text-2xl sm:text-3xl md:text-4xl font-bold text-center md:text-right mb-4 sm:mb-6 md:mb-8">
           <span className="text-[#0047BA]">معًا نحو أعلى المناصب</span>
           <span className="text-[#00A651]"> بالسعودية!</span>
         </h1>
-        <p className="text-center md:text-right text-xs sm:text-sm md:text-base leading-relaxed text-[#454545]">
+        <p className=" relative text-center md:text-right text-xs sm:text-sm md:text-base leading-relaxed text-[#454545]">
           احصل على شهادة الماجستير المهني في إدارة الأعمال MBA المعتمدة من جامعة
           مارا للتكنولوجيا في ماليزيا واختر من بين 5 تخصصات متنوعة:
         </p>
-
-        <div className="flex flex-col-reverse lg:flex-row gap-8 mt-12">
+        <img
+          src="/images/Ellipse 1446.svg"
+          alt="mba program section bg"
+          className="absolute top-[120px] left-[-106px] hidden md:block"
+        />
+        <img
+          src="/images/MbaProgramSection-small-shap.svg"
+          alt="mba program small bg"
+          className="absolute top-[31px] left-[-22px] block md:hidden"
+        />
+        <div className="flex flex-col-reverse lg:flex-row-reverse gap-8 mt-12">
           {/* Right Side - Text Content */}
           <div className="w-full lg:w-1/3 space-y-4 md:space-y-6">
             {infoItems.map((item, index) => (
@@ -85,50 +113,37 @@ export function MbaProgramSection() {
 
           {/* Left Side - Grid Layout */}
           <div className="lg:w-2/3">
-            <div
-              className="grid gap-4"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(2, 1fr)",
-                gridTemplateRows: "repeat(6, 1fr)",
-                gridColumnGap: "19px",
-                gridRowGap: "23px",
-              }}
-            >
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-5 ">
               {specializations.map((spec) => (
                 <div
                   key={spec.id}
-                  className="relative   h-full"
-                  style={{
-                    ...(spec.gridArea === "finance" && {
-                      gridArea: "1 / 1 / 3 / 2",
-                    }),
-                    ...(spec.gridArea === "supply" && {
-                      gridArea: "3 / 1 / 5 / 2",
-                    }),
-                    ...(spec.gridArea === "hr" && {
-                      gridArea: "5 / 1 / 7 / 2",
-                    }),
-                    ...(spec.gridArea === "business" && {
-                      gridArea: "1 / 2 / 4 / 3",
-                    }),
-                    ...(spec.gridArea === "marketing" && {
-                      gridArea: "4 / 2 / 7 / 3",
-                    }),
-                  }}
+                  className={`relative h-full ${
+                    spec.gridArea === "finance"
+                      ? "md:col-start-3 md:col-end-5 md:row-start-1 md:row-end-3"
+                      : spec.gridArea === "supply"
+                      ? "md:col-start-3 md:col-end-5 md:row-start-3 md:row-end-5"
+                      : spec.gridArea === "hr"
+                      ? "md:col-start-3 md:col-end-5 md:row-start-5 md:row-end-7"
+                      : spec.gridArea === "business"
+                      ? "md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-4"
+                      : "md:col-start-1 md:col-end-3 md:row-start-4 md:row-end-7"
+                  }`}
                 >
-                  <div className="relative">
-                    <div className=" overflow-hidden">
+                  <div className="relative h-[200px] md:h-full">
+                    <div className="h-full overflow-hidden rounded-[20px] md:rounded-[32px]">
                       <img
                         src={spec.imageUrl}
                         alt={spec.altText}
-                        className="w-full h-full object-cover rounded-0"
+                        className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center rounded-[20px] md:rounded-[32px]">
-                      <h3 className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-center">
+                    <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center rounded-[20px] md:rounded-[32px] p-4 transition-all duration-300 group hover:bg-opacity-75">
+                      <h3 className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-center mb-4">
                         {spec.title}
                       </h3>
+                      <p className="text-white text-sm md:text-base text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {spec.description}
+                      </p>
                     </div>
                   </div>
                 </div>

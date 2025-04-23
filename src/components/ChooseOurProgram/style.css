@@ -56,6 +56,7 @@
   font-size: 2.5rem;
   color: #fff;
   margin-bottom: 20px;
+  text-align: start;
 }
 
 .choose-our-program-section
@@ -63,8 +64,9 @@
   .choose-our-program-first-part
   .choose-our-program-description {
   font-size: 1.2rem;
-  width: 70%;
+  width: 77%;
   color: #fff;
+  text-align: start;
 }
 
 @media (max-width: 768px) {
@@ -145,11 +147,14 @@
   .choose-our-program-card
   .choose-our-program-card-image {
   z-index: 2;
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  cursor: pointer;
+}
+
+.choose-our-program-second-part .choose-our-program-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .choose-our-program-section
@@ -164,6 +169,8 @@
   .choose-our-program-content
   .choose-our-program-second-part
   .choose-our-program-card
-  .choose-our-program-card-image:hover {
-  transform: scale(1.1) translateY(-20px) translateX(-50%);
+  .choose-our-program-card-content:hover {
+  transform: scale(1.1) translateY(-20px);
+  transition: all 0.5s ease-in-out;
+  z-index: 13;
 }

@@ -1,9 +1,12 @@
 import React from "react";
 import { MBAOnlineLandingPage } from "@/components/mba-online/MBAOnlineLandingPage";
 import { CertificatesSection } from "@/components/CertificatesSection";
-import { OurPrograms } from "@/components/Ourprograms";
-import { MbaProgramSection } from "@/components/MbaProgramSection";
+import { OurPrograms } from "@/components/Ourprograms/Index";
+import { MbaProgramSection } from "@/components/MbaProgramSection/Index";
 import { ChooseOurProgram } from "@/components/ChooseOurProgram/Index";
+import OurStudentsStories from "@/components/OurStudentsStories/Index";
+import PaymentMethod from "@/components/PaymentMethod/Index";
+import Footer from "@/components/Footer/Index";
 export default function Index() {
   return (
     <>
@@ -12,6 +15,9 @@ export default function Index() {
       <OurPrograms />
       <MbaProgramSection />
       <ChooseOurProgram />
+      <OurStudentsStories />
+      <PaymentMethod />
+      <Footer />
     </>
   );
 }

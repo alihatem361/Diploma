@@ -1,3 +1,7 @@
+import React from "react";
+import "./style.css";
+import { motion } from "framer-motion";
+
 export const OurPrograms = () => {
   const programsDtata = [
     {
@@ -15,7 +19,9 @@ export const OurPrograms = () => {
   ];
 
   return (
-    <div dir="rtl" className=" w-full flex flex-col items-center py-10">
+    <div dir="rtl" className="our-programs-container">
+      {/* button shap  larg screens*/}
+
       <h3 className="text-2xl font-bold text-center mb-8 text-[#154394]">
         برنامجنا مخصص لكل من:
       </h3>
@@ -24,16 +30,20 @@ export const OurPrograms = () => {
           {programsDtata.map((program, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center shadow-lg  m-2 w-30 h-30"
+              className="flex flex-col items-center justify-center m-2 w-46 h-46"
             >
-              <div className="bg-[#154394] rounded-full p-4">
+              <motion.div
+                className="bg-[#154394] rounded-full p-6"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+              >
                 <img
                   src={program.image}
                   alt={program.title}
-                  className="w-12 h-12  "
+                  className="w-18 h-18"
                 />
-              </div>
-              <h3 className="text-sm font-medium text-center mt-2 text-[#154394]">
+              </motion.div>
+              <h3 className="text-lg font-medium text-center mt-2 text-[#154394]">
                 {program.title}
               </h3>
             </div>

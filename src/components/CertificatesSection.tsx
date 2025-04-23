@@ -54,7 +54,7 @@ const certificates = [
 export function CertificatesSection() {
   return (
     <section>
-      <div className="relative shadow-[0px_1px_4px_0px_rgba(25,33,61,0.08)] bg-[#154394] flex mt-[-43px] w-full flex-col overflow-hidden items-center justify-center px-[70px] py-[115px] max-md:max-w-full max-md:px-5 max-md:py-[100px]">
+      <div className="relative bg-[#154394] flex mt-[-43px] w-full flex-col overflow-hidden items-center justify-center px-[70px] py-[115px] max-md:max-w-full max-md:px-5 max-md:py-[120px]">
         <div className="">
           <img
             src="/images/Ellipse 146.svg"
@@ -74,9 +74,20 @@ export function CertificatesSection() {
           className="absolute object-contain max-sm:hidden top-[-111px] left-0 w-full z-10"
         />
         <img
+          src="/images/CertificatesSection-small-shap.svg"
+          alt="Ellipse 150"
+          className="absolute bottom-[-50px] left-0 block md:hidden w-full z-[0]"
+        />
+
+        <img
           src="/images/Ellipse 152.svg"
           alt="Ellipse 152"
           className="absolute object-contain bottom-[-73px] left-0 w-full max-sm:w-screen max-sm:object-cover z-10"
+        />
+        <img
+          src="/images/Ellipse 162.svg"
+          alt="Ellipse 162"
+          className="absolute object-contain top-[0px] left-0 w-full max-sm:w-screen max-sm:object-cover z-10 hidden "
         />
 
         <div className=" mb-[-23px] w-full max-w-[1106px] max-md:max-w-full max-md:mb-2.5">

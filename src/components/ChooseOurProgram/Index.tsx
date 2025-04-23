@@ -77,20 +77,22 @@ export const ChooseOurProgram = () => {
           />
 
           <div className="choose-our-program-first-part">
-            <h1 className="choose-our-program-title">
-              <span className="choose-our-program-title-first-part">
-                ليش تختار
-              </span>
-              <span className="choose-our-program-title-second-part">
-                {" "}
-                برنامجنا؟
-              </span>
-            </h1>
-            <p className="choose-our-program-description">
-              "لأننا نوفر لك شهادة معتمدة دولياً، محتوى عملي يناسب سوق العمل،
-              مرونة تامة في الدراسة، وأسعار ميسّرة مع خيارات تقسيط مريحة. كل هذا
-              يساعدك على تحقيق أهدافك المهنية والشخصية بكل سهولة."
-            </p>
+            <div className="choose-our-program-first-part-content">
+              <h1 className="choose-our-program-title">
+                <span className="choose-our-program-title-first-part">
+                  ليش تختار
+                </span>
+                <span className="choose-our-program-title-second-part">
+                  {" "}
+                  برنامجنا؟
+                </span>
+              </h1>
+              <p className="choose-our-program-description">
+                "لأننا نوفر لك شهادة معتمدة دولياً، محتوى عملي يناسب سوق العمل،
+                مرونة تامة في الدراسة، وأسعار ميسّرة مع خيارات تقسيط مريحة. كل
+                هذا يساعدك على تحقيق أهدافك المهنية والشخصية بكل سهولة."
+              </p>
+            </div>
           </div>
 
           <div className="choose-our-program-second-part">
@@ -105,16 +107,20 @@ export const ChooseOurProgram = () => {
                   alt={item.altText}
                   className="choose-our-program-card-shape"
                 />
-                <img
-                  src={item.imageUrl}
-                  alt={item.altText}
-                  className="choose-our-program-card-image"
-                />
+                <div className="choose-our-program-card-content">
+                  <img
+                    src={item.imageUrl}
+                    alt={item.altText}
+                    className="choose-our-program-card-image"
+                  />
 
-                <h2 className="choose-our-program-card-title">{item.title}</h2>
-                <p className="choose-our-program-card-description">
-                  {item.description}
-                </p>
+                  <h2 className="choose-our-program-card-title">
+                    {item.title}
+                  </h2>
+                  <p className="choose-our-program-card-description">
+                    {item.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

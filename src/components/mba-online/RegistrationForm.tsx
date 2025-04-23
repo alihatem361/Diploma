@@ -25,7 +25,7 @@ export function RegistrationForm() {
   };
 
   return (
-    <section className="w-full max-w-[609px] h-[87vh] rounded shadow-[0_0_10px_rgba(0,0,0,0.1)] bg-[#FCFCFC] p-8 md:p-[61px] md:pt-[61px] md:pb-[147px] mx-auto">
+    <section className="w-full max-w-[390px] md:max-w-[580px] h-[79vh] md:h-[87vh] rounded-lg shadow-[0_0_10px_rgba(0,0,0,0.1)] bg-[#FCFCFC] p-8 md:p-[61px] md:pt-[61px] md:pb-[147px] mx-auto">
       <div className="w-full text-center mb-10 text-right">
         <h2 className="font-bold text-2xl text-black">
           <span>سجل الآن و احصل علي</span>{" "}
