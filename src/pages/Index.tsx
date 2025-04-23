@@ -3,6 +3,7 @@ import { MBAOnlineLandingPage } from "@/components/mba-online/MBAOnlineLandingPa
 import { CertificatesSection } from "@/components/CertificatesSection";
 import { OurPrograms } from "@/components/Ourprograms";
 import { MbaProgramSection } from "@/components/MbaProgramSection";
+import { ChooseOurProgram } from "@/components/ChooseOurProgram/Index";
 export default function Index() {
   return (
     <>
@@ -10,6 +11,7 @@ export default function Index() {
       <CertificatesSection />
       <OurPrograms />
       <MbaProgramSection />
+      <ChooseOurProgram />
     </>
   );
 }
