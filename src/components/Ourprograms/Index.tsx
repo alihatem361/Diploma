@@ -22,28 +22,24 @@ export const OurPrograms = () => {
     <div dir="rtl" className="our-programs-container">
       {/* button shap  larg screens*/}
 
-      <h3 className="text-2xl font-bold text-center mb-8 text-[#154394]">
+      <h3 className="text-[24px] font-bold text-center mb-8 text-[#154394]">
         برنامجنا مخصص لكل من:
       </h3>
       <div>
-        <div className="flex flex-col lg:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col lg:flex-row gap-4 justify-center items-center our-programs-container-content">
           {programsDtata.map((program, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center m-2 w-46 h-46"
+              className="flex flex-col items-center justify-center m-2 w-46 h-46 our-programs-card"
             >
-              <motion.div
-                className="bg-[#154394] rounded-full p-6"
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.3 }}
-              >
+              <div className="bg-[#154394] rounded-full p-6 our-programs-image">
                 <img
                   src={program.image}
                   alt={program.title}
                   className="w-18 h-18"
                 />
-              </motion.div>
-              <h3 className="text-lg font-medium text-center mt-2 text-[#154394]">
+              </div>
+              <h3 className="text-[1.225rem] font-bold text-center mt-2 text-[#154394]">
                 {program.title}
               </h3>
             </div>

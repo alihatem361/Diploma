@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./style.css";
 const certificates = [
   {
     id: 1,
@@ -53,8 +53,10 @@ const certificates = [
 
 export function CertificatesSection() {
   return (
-    <section>
-      <div className="relative bg-[#154394] flex mt-[-43px] w-full flex-col overflow-hidden items-center justify-center px-[70px] py-[115px] max-md:max-w-full max-md:px-5 max-md:py-[120px]">
+    <section className="certificates-section-container">
+      <div className="certificates-section-ellipse-150" />
+      <div className="certificates-section-ellipse-152" />
+      <div className="certificates-section">
         <div className="">
           <img
             src="/images/Ellipse 146.svg"
@@ -68,6 +70,8 @@ export function CertificatesSection() {
           />
         </div>
 
+        {/* 
+        
         <img
           src="/images/Ellipse 150.svg"
           alt="Ellipse 150"
@@ -88,7 +92,7 @@ export function CertificatesSection() {
           src="/images/Ellipse 162.svg"
           alt="Ellipse 162"
           className="absolute object-contain top-[0px] left-0 w-full max-sm:w-screen max-sm:object-cover z-10 hidden "
-        />
+        /> */}
 
         <div className=" mb-[-23px] w-full max-w-[1106px] max-md:max-w-full max-md:mb-2.5">
           <div className="gap-5 flex max-md:flex-col-reverse max-md:items-stretch">

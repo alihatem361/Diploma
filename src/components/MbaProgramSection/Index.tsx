@@ -1,10 +1,18 @@
 import React from "react";
 import "./style.css";
+import { useIsMobile } from "../../hooks/use-mobile";
 
 export function MbaProgramSection() {
+  const isMobile = useIsMobile();
+
   const infoItems = [
     "احصل على شهادة الماجستير المهني في إدارة الأعمال MBA المعتمدة من جامعة مارا للتكنولوجيا في ماليزيا واختر من بين 5 تخصصات متنوعة:",
     "احصل على شهادة الماجستير المهني في إدارة الأعمال MBA المعتمدة من جامعة مارا للتكنولوجيا في ماليزيا واختر من بين 5 تخصصات متنوعة:",
+    "احصل على شهادة الماجستير المهني في إدارة الأعمال MBA المعتمدة من جامعة مارا للتكنولوجيا في ماليزيا واختر من بين 5 تخصصات متنوعة:",
+    "احصل على شهادة الماجستير المهني في إدارة الأعمال MBA المعتمدة من جامعة مارا للتكنولوجيا في ماليزيا واختر من بين 5 تخصصات متنوعة:",
+    "احصل على شهادة الماجستير المهني في إدارة الأعمال MBA المعتمدة من جامعة مارا للتكنولوجيا في ماليزيا واختر من بين 5 تخصصات متنوعة:",
+  ];
+  const infoItemsInSmallScreen = [
     "احصل على شهادة الماجستير المهني في إدارة الأعمال MBA المعتمدة من جامعة مارا للتكنولوجيا في ماليزيا واختر من بين 5 تخصصات متنوعة:",
     "احصل على شهادة الماجستير المهني في إدارة الأعمال MBA المعتمدة من جامعة مارا للتكنولوجيا في ماليزيا واختر من بين 5 تخصصات متنوعة:",
     "احصل على شهادة الماجستير المهني في إدارة الأعمال MBA المعتمدة من جامعة مارا للتكنولوجيا في ماليزيا واختر من بين 5 تخصصات متنوعة:",
@@ -77,11 +85,11 @@ export function MbaProgramSection() {
       />
 
       <div className="relative w-full max-w-7xl mx-auto px-8 md:px-4 pb-12 pt-[90px] md:pt-[180px]">
-        <h1 className=" relative text-2xl sm:text-3xl md:text-4xl font-bold text-center md:text-right mb-4 sm:mb-6 md:mb-8">
+        <h1 className=" relative text-2xl sm:text-3xl md:text-4xl font-bold text-center pt-[50px] md:text-right mb-4 sm:mb-6 md:mb-8">
           <span className="text-[#0047BA]">معًا نحو أعلى المناصب</span>
           <span className="text-[#00A651]"> بالسعودية!</span>
         </h1>
-        <p className=" relative text-center md:text-right text-xs sm:text-sm md:text-base leading-relaxed text-[#454545]">
+        <p className=" relative text-right text-xs sm:text-sm md:text-base leading-relaxed text-[#454545]">
           احصل على شهادة الماجستير المهني في إدارة الأعمال MBA المعتمدة من جامعة
           مارا للتكنولوجيا في ماليزيا واختر من بين 5 تخصصات متنوعة:
         </p>
@@ -95,18 +103,28 @@ export function MbaProgramSection() {
           alt="mba program small bg"
           className="absolute top-[31px] left-[-22px] block md:hidden"
         />
-        <div className="flex flex-col-reverse lg:flex-row-reverse gap-8 mt-12">
+        <div className="flex flex-col-reverse lg:flex-row-reverse gap-8 mt-12 ">
           {/* Right Side - Text Content */}
-          <div className="w-full lg:w-1/3 space-y-4 md:space-y-6">
-            {infoItems.map((item, index) => (
-              <p
-                key={index}
-                className="text-sm md:text-base lg:text-sm leading-relaxed text-[#454545] text-center lg:text-right"
-              >
-                {item}
-              </p>
-            ))}
-            <button className="bg-[#00A651] text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-[6px] text-base sm:text-lg font-bold w-full hover:bg-[#008c44] transition-colors mt-6 md:mt-8">
+          <div className="w-full lg:w-1/3 space-y-4 md:space-y-6 text-right">
+            {isMobile
+              ? infoItemsInSmallScreen.map((item, index) => (
+                  <p
+                    key={index}
+                    className="text-[#454545] text-xs sm:text-sm md:text-base leading-relaxed"
+                  >
+                    {item}
+                  </p>
+                ))
+              : infoItems.map((item, index) => (
+                  <p
+                    key={index}
+                    className="text-[#454545] text-xs sm:text-sm md:text-base leading-relaxed"
+                  >
+                    {item}
+                  </p>
+                ))}
+
+            <button className="bg-[#00A651] text-white px-4 sm:px-6 md:px-8 py-2 sm:py-2 rounded-[6px] text-base sm:text-lg font-bold w-[100%] md:w-[80%] hover:bg-[#008c44] transition-colors mt-6 md:mt-8">
               سجل الآن وابدأ رحلتك!
             </button>
           </div>
@@ -128,6 +146,9 @@ export function MbaProgramSection() {
                       ? "md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-4"
                       : "md:col-start-1 md:col-end-3 md:row-start-4 md:row-end-7"
                   }`}
+                  style={{
+                    cursor: "pointer",
+                  }}
                 >
                   <div className="relative h-[200px] md:h-full">
                     <div className="h-full overflow-hidden rounded-[20px] md:rounded-[32px]">
@@ -137,11 +158,11 @@ export function MbaProgramSection() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center rounded-[20px] md:rounded-[32px] p-4 transition-all duration-300 group hover:bg-opacity-75">
+                    <div className="absolute inset-0 bg-black bg-opacity-10 flex flex-col items-center justify-center rounded-[20px] md:rounded-[32px] p-4 transition-all duration-300 group hover:bg-opacity-30">
                       <h3 className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-center mb-4">
                         {spec.title}
                       </h3>
-                      <p className="text-white text-sm md:text-base text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-sm w-[80%] mx-auto md:text-base text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         {spec.description}
                       </p>
                     </div>

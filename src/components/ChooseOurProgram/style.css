@@ -39,6 +39,13 @@
   padding: 20px;
 }
 
+@media (max-width: 768px) {
+  .choose-our-program-section .choose-our-program-content > div {
+    flex: 1 1 100%;
+    padding: 0;
+  }
+}
+
 .choose-our-program-section
   .choose-our-program-content
   .choose-our-program-first-part {
@@ -47,6 +54,15 @@
   align-items: end;
   text-align: start;
   z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .choose-our-program-section
+    .choose-our-program-content
+    .choose-our-program-first-part {
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .choose-our-program-section
