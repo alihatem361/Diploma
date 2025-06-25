@@ -10,34 +10,34 @@ import { useEffect } from "react";
 const queryClient = new QueryClient();
 
 const App = () => {
-  useEffect(() => {
-    // Only prevent dev tools in production
-    if (import.meta.env.VITE_APP_ENV === "production") {
-      // Prevent opening console
-      const preventConsole = (e: KeyboardEvent) => {
-        if (
-          e.key === "F12" ||
-          (e.ctrlKey && e.shiftKey && e.key === "I") ||
-          (e.ctrlKey && e.shiftKey && e.key === "J")
-        ) {
-          e.preventDefault();
-        }
-      };
+  // useEffect(() => {
+  //   // Only prevent dev tools in production
+  //   if (import.meta.env.VITE_APP_ENV === "production") {
+  //     // Prevent opening console
+  //     const preventConsole = (e: KeyboardEvent) => {
+  //       if (
+  //         e.key === "F12" ||
+  //         (e.ctrlKey && e.shiftKey && e.key === "I") ||
+  //         (e.ctrlKey && e.shiftKey && e.key === "J")
+  //       ) {
+  //         e.preventDefault();
+  //       }
+  //     };
 
-      // Prevent right click
-      const preventContextMenu = (e: MouseEvent) => {
-        e.preventDefault();
-      };
+  //     // Prevent right click
+  //     const preventContextMenu = (e: MouseEvent) => {
+  //       e.preventDefault();
+  //     };
 
-      window.addEventListener("keydown", preventConsole);
-      window.addEventListener("contextmenu", preventContextMenu);
+  //     window.addEventListener("keydown", preventConsole);
+  //     window.addEventListener("contextmenu", preventContextMenu);
 
-      return () => {
-        window.removeEventListener("keydown", preventConsole);
-        window.removeEventListener("contextmenu", preventContextMenu);
-      };
-    }
-  }, []);
+  //     return () => {
+  //       window.removeEventListener("keydown", preventConsole);
+  //       window.removeEventListener("contextmenu", preventContextMenu);
+  //     };
+  //   }
+  // }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
